@@ -2,16 +2,15 @@
 
 import inquirer from "inquirer";
 import chalk from "chalk";
-import chalkAnimation from "chalk-animation";
 let score1: number = 0;
 async function calculatingScore(score: number) {
   console.log(
-    chalk.italic(chalk.magentaBright(`You score is ${score1} out of 5`))
+    chalk.italic(chalk.magentaBright(`You score is ${score} out of 5`))
   );
 
-  if (score1 <= 2) {
+  if (score <= 2) {
     console.log(chalk.yellow(chalk.italic("Better Luck! Try Next Time.")));
-  } else if (score1 > 2) {
+  } else if (score> 2) {
     console.log(
       chalk.bold(
         chalk.red(
