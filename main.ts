@@ -24,7 +24,6 @@ function calculatingScore(score: number): void {
 
 let questionsArray: any[] = [];
 
-
 const answers = await inquirer.prompt([
   {
     type: "list",
@@ -204,26 +203,13 @@ if (answers.level == "Hard") {
 
 async function mainFunction() {
   for (let i = 0; i < questionsArray.length; i++) {
-    const userAnswer= await inquirer.prompt(questionsArray[i]);
-    const correctAnswer=questionsArray[i].correctAnswers
+    const userAnswer = await inquirer.prompt(questionsArray[i]);
+    const correctAnswer = questionsArray[i].correctAnswers;
     console.log(`correct Answer : ${questionsArray[i].correctAnswers}`);
-if(userAnswer[questionsArray[i].name]===correctAnswer){
-  score1++
-}
-      }
+    if (userAnswer[questionsArray[i].name] === correctAnswer) {
+      score1++;
+    }
+  }
 
   await calculatingScore(score1);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
