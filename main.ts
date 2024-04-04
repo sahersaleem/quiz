@@ -4,7 +4,7 @@ import inquirer from "inquirer";
 import chalk from "chalk";
 import chalkAnimation from "chalk-animation";
 let score1: number = 0;
-function calculatingScore(score: number): void {
+async function calculatingScore(score: number) {
   console.log(
     chalk.italic(chalk.magentaBright(`You score is ${score1} out of 5`))
   );

@@ -2,7 +2,7 @@
 import inquirer from "inquirer";
 import chalk from "chalk";
 let score1 = 0;
-function calculatingScore(score) {
+async function calculatingScore(score) {
     console.log(chalk.italic(chalk.magentaBright(`You score is ${score1} out of 5`)));
     if (score1 <= 2) {
         console.log(chalk.yellow(chalk.italic("Better Luck! Try Next Time.")));
